@@ -1,3 +1,9 @@
+import bcrypt from "bcryptjs";
+import jwt from "jsonwebtoken";
+
+const ADMIN_USER = "admin";
+const ADMIN_PASS = bcrypt.hashSync("123456", 10);
+const JWT_SECRET = "secretkey";
 import express from "express";
 import mongoose from "mongoose";
 import cors from "cors";
