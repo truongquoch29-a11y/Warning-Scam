@@ -1,32 +1,21 @@
-<!DOCTYPE html>
-<html lang="vi">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SHOP ACC TH</title>
 
-<style>
-footer{
-margin:30px 15px 20px;
-padding:20px 15px;
-background:#1e293b;
-border-radius:18px;
-text-align:center;
-font-size:13px;
-box-shadow:0 10px 25px rgba(0,0,0,0.35);
-}
-
-footer h3{
-margin-bottom:8px;
-font-size:16px;
-letter-spacing:1px;
-}
-
-.footer-links{
-margin:10px 0;
-}
-
-.footer-links a{
+<!DOCTYPE html>  <html lang="vi">    <head>      <meta charset="UTF-8">        <meta name="viewport" content="width=device-width, initial-scale=1.0">        
+<title>SHOP ACC TH</title>  <style>        
+    footer{        
+    margin:30px 15px 20px;        
+    padding:20px 15px;        
+    background:#1e293b;        
+    border-radius:18px;        
+    text-align:center;        
+    font-size:13px;        
+    box-shadow:0 10px 25px rgba(0,0,0,0.35);        
+}    footer h3{    
+margin-bottom:8px;    
+font-size:16px;    
+letter-spacing:1px;    
+}  .footer-links{  
+margin:10px 0;  
+}  .footer-links a{
 display:inline-block;
 margin:4px 6px;
 padding:6px 12px;
@@ -49,6 +38,7 @@ font-size:12px;
 opacity:0.8;
 }
 
+/* light mode */
 body.light-mode footer{
 background:#ffffff;
 color:#0f172a;
@@ -58,7 +48,6 @@ body.light-mode .footer-links a{
 background:#e2e8f0;
 color:#0f172a;
 }
-
 .section-title{
 text-align:center;
 font-size:20px;
@@ -78,13 +67,26 @@ height:2px;
 background:linear-gradient(90deg,#7c3aed,#ec4899);
 }
 
-.section-title::before{left:0;}
-.section-title::after{right:0;}
+.section-title::before{
+left:0;
+}
+
+.section-title::after{
+right:0;
+}
 
 body.light-mode .section-title{
 color:#0f172a;
 }
+.shop-notice-box{
+background:#ffffff;
+padding:10px;
+border-radius:14px;
+margin:10px;
+border:1px solid #e5e7eb;
+}
 
+/* đảm bảo không mất chữ khi dark mode */
 .shop-notice-box{
 padding:14px;
 border-radius:18px;
@@ -92,24 +94,26 @@ margin:15px;
 transition:0.4s ease;
 }
 
+/* ===== DARK MODE (mặc định) ===== */
 body:not(.light-mode) .shop-notice-box{
 background:#1e293b;
 color:#f1f5f9;
 border:1px solid #334155;
 }
 
+/* ===== LIGHT MODE ===== */
 body.light-mode .shop-notice-box{
 background:#ffffff;
 color:#0f172a;
 border:1px solid #e2e8f0;
 }
-
 body{
 background:#0f172a;
 color:#f1f5f9;
 transition:background 0.4s ease,color 0.4s ease;
 }
 
+/* ===== LIGHT MODE ===== */
 body.light-mode{
 background:#f1f5f9;
 color:#0f172a;
@@ -120,6 +124,7 @@ body.light-mode .marquee{background:#e2e8f0;}
 body.light-mode .card{background:#ffffff;}
 body.light-mode .popup{background:#ffffff;}
 
+/* ===== HEADER ===== */
 header{
 background:#1e293b;
 padding:12px 15px;
@@ -131,9 +136,17 @@ margin:15px;
 box-shadow:0 12px 30px rgba(0,0,0,0.4);
 }
 
-.logo-wrap{width:160px;}
-.logo-img{width:100%;object-fit:contain;display:block;}
+.logo-wrap{
+width:160px;
+}
 
+.logo-img{
+width:100%;
+object-fit:contain;
+display:block;
+}
+
+/* ===== THEME BUTTON NHỎ + ANIMATION ===== */
 .theme-toggle{
 width:32px;
 height:32px;
@@ -148,25 +161,31 @@ transition:all 0.4s ease;
 box-shadow:0 4px 12px rgba(0,0,0,0.4);
 }
 
-body.light-mode .theme-toggle{background:#cbd5e1;}
+body.light-mode .theme-toggle{
+background:#cbd5e1;
+}
 
-.theme-toggle:hover{transform:scale(1.15) rotate(20deg);}
+.theme-toggle:hover{
+transform:scale(1.15) rotate(20deg);
+}
 
-.theme-rotate{animation:spinTheme 0.5s ease;}
+.theme-rotate{
+animation:spinTheme 0.5s ease;
+}
 
 @keyframes spinTheme{
 from{transform:rotate(0deg) scale(1);}
 to{transform:rotate(360deg) scale(1.2);}
 }
 
-/* ===== MARQUEE ===== */
+/* ===== MARQUEE ===== /
 .marquee{
 background:#1e293b;
-margin:10px 40px;
-padding:6px 10px;
+margin:10px 40px;      / thu hẹp chiều ngang /
+padding:6px 10px;      / giảm chiều cao /
 border-radius:10px;
 overflow:hidden;
-font-size:13px;
+font-size:13px;        / chữ nhỏ hơn */
 }
 
 .marquee p{
@@ -179,6 +198,7 @@ from{transform:translateX(100%)}
 to{transform:translateX(-100%)}
 }
 
+/* ===== CARD ===== */
 .container{padding:15px;}
 
 .card{
@@ -188,8 +208,16 @@ padding:15px;
 box-shadow:0 12px 30px rgba(0,0,0,0.35);
 }
 
-.image-wrap{position:relative;overflow:hidden;border-radius:14px;}
-.image-wrap img{width:100%;display:block;}
+.image-wrap{
+position:relative;
+overflow:hidden;
+border-radius:14px;
+}
+
+.image-wrap img{
+width:100%;
+display:block;
+}
 
 .sale-badge{
 position:absolute;
@@ -205,10 +233,20 @@ letter-spacing:1px;
 animation:salePulse 1.2s infinite ease-in-out;
 }
 
+/* Hiệu ứng đập + phát sáng */
 @keyframes salePulse{
-0%{transform:scale(1);box-shadow:0 0 0 rgba(255,0,0,0.7);}
-50%{transform:scale(1.12);box-shadow:0 0 18px rgba(255,0,0,0.9);}
-100%{transform:scale(1);box-shadow:0 0 0 rgba(255,0,0,0.7);}
+0%{
+transform:scale(1);
+box-shadow:0 0 0 rgba(255,0,0,0.7);
+}
+50%{
+transform:scale(1.12);
+box-shadow:0 0 18px rgba(255,0,0,0.9);
+}
+100%{
+transform:scale(1);
+box-shadow:0 0 0 rgba(255,0,0,0.7);
+}
 }
 
 .acc-id{
@@ -237,6 +275,7 @@ font-size:12px;
 color:#fff;
 }
 
+/* ===== PRICE BOX ===== */
 .price-box{
 background:#141a2e;
 border-radius:12px;
@@ -282,12 +321,13 @@ text-shadow:0 0 10px rgba(0,255,200,0.5);
 }
 
 @keyframes priceSoft{
-0%{transform:translateY(0px);}
-50%{transform:translateY(-2px);}
-100%{transform:translateY(0px);}
+0%{ transform:translateY(0px); }
+50%{ transform:translateY(-2px); }
+100%{ transform:translateY(0px); }
 }
 
-/* ===== NÚT XEM CHI TIẾT ===== */
+/* ===== NÚT XEM CHI TIẾT BẮT MẮT ===== */
+.detail-btn{
 .detail-btn{
 display:block;
 width:80%;
@@ -306,20 +346,126 @@ transition:0.25s ease;
 animation:pulseGlow 1.8s infinite;
 }
 
+/* Hiệu ứng phát sáng nhịp tim */
 @keyframes pulseGlow{
-0%{box-shadow:0 0 0 rgba(255,0,102,0.6);}
-50%{box-shadow:0 0 25px rgba(255,0,102,0.8);}
-100%{box-shadow:0 0 0 rgba(255,0,102,0.6);}
+0%{
+box-shadow:0 0 0 rgba(255,0,102,0.6);
+}
+50%{
+box-shadow:0 0 25px rgba(255,0,102,0.8);
+}
+100%{
+box-shadow:0 0 0 rgba(255,0,102,0.6);
+}
 }
 
-.detail-btn:hover{transform:scale(1.06);}
-.detail-btn:active{transform:scale(0.96);}
+/* Khi hover */
+.detail-btn:hover{
+transform:scale(1.06);
+}
 
+/* Hiệu ứng ripple khi bấm /
+.detail-btn:active{
+transform:scale(0.96);
+}
+/ Animation khi rời trang */
 body.fade-out{
 opacity:0;
 transform:translateX(-60px);
 transition:0.35s ease;
 }
-</style>
-</head>
-<body>
+</style>  </head>  <body>  <header>
+
+<div class="logo-wrap">    
+<img src="images/logo3.png" class="logo-img">    
+</div>    
+<div class="theme-toggle" id="themeIcon" onclick="toggleTheme()">🌙</div>  </header>  <div class="marquee">        
+    <p>🔥 Shop TH acc uy tín - Bảo hành gmail 7 ngày - Hỗ trợ 24/7 🔥</p>        
+</div>  <div class="container">        
+     <!-- THÔNG BÁO TỪ SHOP -->  <div class="shop-notice-box">  <div class="notice-title">        
+    📢 THÔNG BÁO TỪ SHOP        
+</div>    <div class="notice-content">        
+    🔔 <strong>Anh em lưu ý:</strong><br>        
+    🌐 Website chính thức: <strong>THTSCSHOP</strong><br><br>    Nếu có bất kỳ vấn đề, thắc mắc hoặc cần hỗ trợ, vui lòng liên hệ ngay bên dưới để được phản hồi nhanh nhất:        
+<br><br>      📱  
+<a href="https://zalo.me/0702093263" target="_blank" class="notice-link zalo">  
+HỖ TRỢ QUA ZALO  
+</a>  
+<br><br>  📘
+<a href="https://www.facebook.com/share/1Q8MGeMzvT/?mibextid=wwXIfr" target="_blank" class="notice-link facebook">
+LIÊN HỆ FACEBOOK
+</a>
+<br><br>
+
+🚀
+<a href="https://zalo.me/g/rbdkzp864" target="_blank" class="notice-link group">
+THAM GIA NHÓM ZALO
+</a>
+
+<br><br>
+
+✅ Bán acc từ cùi → VIP<br>
+✅ Thu mua acc cho anh em chán game<br>
+
+🔒 Uy tín – Nhanh gọn – Hỗ trợ 24/7
+
+</div>  </div>        
+    <div class="section-title">SHOP ACC</div>        
+    <div class="card">  <div class="image-wrap">        
+        <div class="sale-badge">🔥 SALE 35%</div>        
+        <img src="images/A4.jpg">        
+        <div class="acc-id">MS: 000004</div>        
+    </div>    <div class="badges">        
+    <div class="badge">✔ acc dính xác minh</div>        
+    <div class="badge">✔ bảo hành gmail 7 ngày</div>        
+</div>      <div class="price-box">        
+    <div class="old-price">200.000 đ</div>        
+    <div class="new-price">130.000 đ</div>        
+</div>      <a href="chitieta1.html" class="detail-btn" onclick="return goDetail(event)">  XEM CHI TIẾT →  
+</a>  </div>  </div>  <div class="popup" id="popup">        
+    🔔 TH UY TÍN VCL        
+</div>  <script>        
+function toggleTheme(){        
+    const body=document.body;        
+    const icon=document.getElementById("themeIcon");    icon.classList.add("theme-rotate");      body.classList.toggle("light-mode");  setTimeout(()=>{
+icon.textContent = body.classList.contains("light-mode") ? "☀️" : "🌙";
+icon.classList.remove("theme-rotate");
+},300);
+
+}
+
+window.addEventListener("load",function(){
+const popup=document.getElementById("popup");
+popup.style.animation="slideIn 0.6s forwards";
+setTimeout(()=>{
+popup.style.animation="slideOut 0.6s forwards";
+},10000);
+});
+
+function openSupport(){
+/* THAY LINK BÊN DƯỚI BẰNG LINK ZALO HOẶC FACEBOOK CỦA BẠN */
+window.open("https://zalo.me/xxxxxxxxxx","_blank");
+
+/* Hoặc dùng Facebook:
+window.open("https://facebook.com/yourpage","_blank");
+*/
+
+}
+</script>  <footer>
+
+<h3>THTSCSHOP</h3>    <div class="footer-links">        
+    <a href="https://zalo.me/0702093263" target="_blank">ZALO</a>        
+    <a href="https://www.facebook.com/share/1Q8MGeMzvT/?mibextid=wwXIfr" target="_blank">FACEBOOK</a>        
+    <a href="https://zalo.me/g/rbdkzp864" target="_blank">NHÓM ZALO</a>        
+</div>    <p>© 2024 THTSCSHOP - Bán acc uy tín - Hỗ trợ 24/7</p>        
+</footer>        
+<script>  function goDetail(e){    
+e.preventDefault();    
+document.body.classList.add("fade-out");    
+setTimeout(function(){    
+window.location.href = "chitieta1.html";    
+},350);    
+return false;    
+}    
+</script>  </body>        
+</html>
