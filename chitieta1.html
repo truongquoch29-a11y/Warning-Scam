@@ -6,58 +6,86 @@
 <title>Chi Tiết Tài Khoản</title>
 
 <style>
-body{
+*{
     margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
     font-family:Arial, sans-serif;
     background:#f2f3f7;
+    display:flex;
+    justify-content:center;
+    padding:30px 15px;
     opacity:0;
-    transform:translateX(60px);
-    transition:opacity 0.4s ease, transform 0.4s ease;
+    transform:translateY(30px);
+    transition:opacity 0.5s ease, transform 0.5s ease;
 }
 
 body.page-in{
     opacity:1;
-    transform:translateX(0);
+    transform:translateY(0);
 }
 
 .container{
+    width:100%;
     max-width:500px;
-    margin:20px auto;
-    background:#fff;
-    padding:20px;
-    border-radius:14px;
-    box-shadow:0 8px 25px rgba(0,0,0,0.08);
+    background:#ffffff;
+    padding:22px;
+    border-radius:16px;
+    box-shadow:0 12px 35px rgba(0,0,0,0.08);
+    animation:fadeCard 0.6s ease;
+}
+
+@keyframes fadeCard{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
 }
 
 .title{
     text-align:center;
     font-size:22px;
     font-weight:bold;
+    margin-bottom:18px;
+}
+
+.image-box{
+    width:100%;
+    border-radius:14px;
+    overflow:hidden;
     margin-bottom:15px;
 }
 
 .image-box img{
     width:100%;
-    border-radius:12px;
+    height:auto;
+    display:block;
 }
 
 .info{
-    margin-top:15px;
     text-align:center;
+    margin-bottom:15px;
 }
 
 .price{
     font-size:22px;
     font-weight:bold;
-    margin:10px 0;
+    margin-top:8px;
 }
 
 .badges{
     display:flex;
     flex-wrap:wrap;
-    gap:10px;
+    gap:8px;
     justify-content:center;
-    margin-bottom:15px;
+    margin-bottom:18px;
 }
 
 .badge{
@@ -65,25 +93,29 @@ body.page-in{
     color:#fff;
     padding:8px 12px;
     border-radius:8px;
-    font-size:14px;
+    font-size:13px;
 }
 
 .pay-btn{
     display:block;
     width:100%;
-    padding:14px;
+    padding:14px 0;
     background:linear-gradient(45deg,#111,#333);
     color:#fff;
     text-align:center;
-    border-radius:10px;
+    border-radius:12px;
     text-decoration:none;
     font-weight:bold;
-    transition:0.3s;
+    transition:all 0.25s ease;
 }
 
 .pay-btn:hover{
-    transform:translateY(-2px);
-    opacity:0.9;
+    transform:translateY(-3px);
+    box-shadow:0 8px 20px rgba(0,0,0,0.15);
+}
+
+.pay-btn:active{
+    transform:scale(0.98);
 }
 </style>
 </head>
@@ -94,7 +126,8 @@ body.page-in{
     <div class="title">Chi Tiết Tài Khoản #000004</div>
 
     <div class="image-box">
-        <img src="https://via.placeholder.com/500x300" alt="images/A3">
+        <!-- Đặt ảnh thật vào thư mục images và sửa lại đường dẫn nếu cần -->
+        <img src="images/A3.jpg" alt="Ảnh tài khoản">
     </div>
 
     <div class="info">
