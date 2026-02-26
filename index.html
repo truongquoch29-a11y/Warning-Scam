@@ -77,17 +77,21 @@ header::before{
 
 /* ===== LOGO ===== */
 .logo-wrap{
-    height:120px;          /* giữ nguyên khung */
-    overflow:hidden;       /* không cho tràn */
-    display:flex;
-    align-items:center;
-    justify-content:center;
+    width:100%;
+    height:120px;
+    position:relative;
+    overflow:hidden;
 }
 
 .logo-img{
-    transform:scale(1.3);
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%) scale(1.4);
+    height:auto;
+    width:auto;
+    max-height:none;
 }
-
 /* ===== ICON ===== */
 .header-icons{
     font-size:24px;
