@@ -300,27 +300,39 @@ font-size:12px;
 color:#fff;
 }
 /* ===== PRICE MODERN ===== */
+/* ===== PRICE BOX PROFESSIONAL ===== */
 .price-box{
 margin:16px 0 14px;
+padding:14px 12px;
 text-align:center;
-padding:10px 0;
+background:#111827;
+border:1px solid #1f2937;
+border-radius:14px;
+box-shadow:0 6px 18px rgba(0,0,0,0.25);
+}
+
+body.light-mode .price-box{
+background:#ffffff;
+border:1px solid #e5e7eb;
 }
 
 .old-price{
 font-size:13px;
-color:#94a3b8;
+color:#9ca3af;
 text-decoration:line-through;
 margin-bottom:6px;
-opacity:0.8;
+display:block;
 }
 
 .new-price{
 font-size:22px;
 font-weight:700;
-background:linear-gradient(90deg,#22c55e,#00ffc8);
--webkit-background-clip:text;
--webkit-text-fill-color:transparent;
+color:#22c55e;
 letter-spacing:0.5px;
+}
+
+body.light-mode .new-price{
+color:#16a34a;
 }
 /* ===== DETAIL BUTTON ANIMATED ===== */
 .detail-btn{
