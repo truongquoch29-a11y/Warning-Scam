@@ -1,4 +1,41 @@
-<!DOCTYPE html>  <html lang="vi">    <head>      <meta charset="UTF-8">        <meta name="viewport" content="width=device-width, initial-scale=1.0">          <title>SHOP ACC TH</title>  <style>          
+<!DOCTYPE html>  <html lang="vi">    <head>      <meta charset="UTF-8">        <meta name="viewport" content="width=device-width, initial-scale=1.0">          <title>SHOP ACC TH</title>  <style>    
+    /* ===== POPUP ===== */
+.popup{
+position:fixed;
+bottom:25px;
+left:50%;
+transform:translateX(-50%) translateY(120%);
+z-index:999;
+pointer-events:none;
+}
+
+.popup-content{
+background:linear-gradient(135deg,#7c3aed,#ec4899);
+color:#fff;
+padding:12px 22px;
+border-radius:30px;
+font-weight:700;
+font-size:14px;
+letter-spacing:1px;
+box-shadow:0 8px 25px rgba(0,0,0,0.35);
+animation:popupGlow 2s infinite alternate;
+}
+
+/* hiệu ứng phát sáng nhẹ */
+@keyframes popupGlow{
+from{ box-shadow:0 0 10px rgba(236,72,153,0.6); }
+to{ box-shadow:0 0 25px rgba(124,58,237,0.9); }
+}
+
+/* animation vào */
+@keyframes slideUp{
+to{ transform:translateX(-50%) translateY(0); }
+}
+
+/* animation ra */
+@keyframes slideDown{
+to{ transform:translateX(-50%) translateY(120%); }
+}
     footer{          
     margin:30px 15px 20px;          
     padding:20px 15px;          
@@ -416,8 +453,10 @@ THAM GIA NHÓM ZALO
     <div class="old-price">200.000 đ</div>          
     <div class="new-price">130.000 đ</div>          
 </div>      <a href="chitieta1.html" class="detail-btn" onclick="return goDetail(event)">  XEM CHI TIẾT →    
-</a>  </div>  </div>  <div class="popup" id="popup">          
-    🔔 TH UY TÍN VCL          
+</a>  </div>  </div>  <div class="popup" id="popup">
+  <div class="popup-content">
+    🔔 TH UY TÍN VCL
+  </div>
 </div>  <script>          
 function toggleTheme(){          
     const body=document.body;          
