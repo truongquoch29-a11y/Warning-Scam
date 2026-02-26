@@ -339,74 +339,51 @@ body.light-mode .theme-toggle{
 }
 
 /* ===== NÚT XEM CHI TIẾT BẮT MẮT ===== */
-.btn{
+.detail-btn{
     display:block;
+    width:80%;
+    margin:16px auto 0;
+    padding:14px;
     text-align:center;
-    padding:13px;
-    border-radius:14px;
-    text-decoration:none;
-    font-weight:bold;
+    font-weight:600;
+    letter-spacing:1px;
     color:#fff;
-    background:linear-gradient(135deg,#2563eb,#7c3aed,#ec4899);
-    background-size:200% 200%;
-    animation:gradientMove 4s ease infinite;
+    text-decoration:none;
+    border-radius:12px;
+    background:linear-gradient(90deg,#00ffc8,#00bfff);
+    box-shadow:0 6px 18px rgba(0,255,200,0.25);
     position:relative;
     overflow:hidden;
-    transition:all 0.25s ease;
-    letter-spacing:1px;
+    transition:0.3s ease;
 }
 
-@keyframes gradientMove{
-    0%{background-position:0% 50%;}
-    50%{background-position:100% 50%;}
-    100%{background-position:0% 50%;}
+/* Hover nổi bật */
+.detail-btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 22px rgba(0,255,200,0.4);
 }
 
-.btn:hover{
-    transform:translateY(-4px) scale(1.05);
-    box-shadow:0 12px 25px rgba(124,58,237,0.6);
-}
-
-.btn:active{
-    transform:scale(0.95);
-}
-
-/* Hiệu ứng ánh sáng lướt */
-.btn::after{
+/* Sóng chạy nhẹ */
+.detail-btn::before{
     content:"";
     position:absolute;
     top:0;
     left:-100%;
     width:100%;
     height:100%;
-    background:linear-gradient(120deg,transparent,rgba(255,255,255,0.5),transparent);
+    background:linear-gradient(120deg,transparent,rgba(255,255,255,0.4),transparent);
     transition:0.6s;
 }
 
-.btn:hover::after{
+.detail-btn:hover::before{
     left:100%;
 }
 
-/* ===== POPUP ===== */
-.popup{
-    position:fixed;
-    bottom:20px;
-    right:-250px;
-    background:#1e293b;
-    padding:10px 14px;
-    border-radius:10px;
-    font-size:13px;
-    box-shadow:0 8px 20px rgba(0,0,0,0.4);
-}
-
-@keyframes slideIn{
-    from{right:-250px;opacity:0}
-    to{right:20px;opacity:1}
-}
-
-@keyframes slideOut{
-    from{right:20px;opacity:1}
-    to{right:-250px;opacity:0}
+/* Animation khi rời trang */
+body.fade-out{
+    opacity:0;
+    transform:translateX(-60px);
+    transition:0.35s ease;
 }
 </style>
 </head>
@@ -487,7 +464,7 @@ body.light-mode .theme-toggle{
         </div>
 
         <a href="chitieta1.html" class="detail-btn" onclick="return goDetail(event)">
-    XEM CHI TIẾT
+    XEM CHI TIẾT →
         </a>
 
     </div>
@@ -540,5 +517,15 @@ function openSupport(){
 
     <p>© 2024 THTSCSHOP - Bán acc uy tín - Hỗ trợ 24/7</p>
     </footer>
+    <script>
+function goDetail(e){
+    e.preventDefault();
+    document.body.classList.add("fade-out");
+    setTimeout(function(){
+        window.location.href = "chitieta1.html";
+    },350);
+    return false;
+}
+    </script>
 </body>
 </html>
