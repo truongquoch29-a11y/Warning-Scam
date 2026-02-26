@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chi Tiết Tài Khoản</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:#f2f3f7;
+    opacity:0;
+    transform:translateX(60px);
+    transition:opacity 0.4s ease, transform 0.4s ease;
+}
+
+body.page-in{
+    opacity:1;
+    transform:translateX(0);
+}
+
+.container{
+    max-width:500px;
+    margin:20px auto;
+    background:#fff;
+    padding:20px;
+    border-radius:14px;
+    box-shadow:0 8px 25px rgba(0,0,0,0.08);
+}
+
+.title{
+    text-align:center;
+    font-size:22px;
+    font-weight:bold;
+    margin-bottom:15px;
+}
+
+.image-box img{
+    width:100%;
+    border-radius:12px;
+}
+
+.info{
+    margin-top:15px;
+    text-align:center;
+}
+
+.price{
+    font-size:22px;
+    font-weight:bold;
+    margin:10px 0;
+}
+
+.badges{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    justify-content:center;
+    margin-bottom:15px;
+}
+
+.badge{
+    background:#000;
+    color:#fff;
+    padding:8px 12px;
+    border-radius:8px;
+    font-size:14px;
+}
+
+.pay-btn{
+    display:block;
+    width:100%;
+    padding:14px;
+    background:linear-gradient(45deg,#111,#333);
+    color:#fff;
+    text-align:center;
+    border-radius:10px;
+    text-decoration:none;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.pay-btn:hover{
+    transform:translateY(-2px);
+    opacity:0.9;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <div class="title">Chi Tiết Tài Khoản #08154116</div>
+
+    <div class="image-box">
+        <img src="https://via.placeholder.com/500x300" alt="Ảnh acc">
+    </div>
+
+    <div class="info">
+        <div>ACC VIP</div>
+        <div class="price">Giá: 400.000 đ</div>
+    </div>
+
+    <div class="badges">
+        <div class="badge">Acc Dính Xác Minh</div>
+        <div class="badge">Bảo Hành Gmail 7 ngày</div>
+        <div class="badge">Game Không Bảo Hành</div>
+    </div>
+
+    <a href="#" class="pay-btn">Thanh Toán</a>
+</div>
+
+<script>
+window.addEventListener("load",function(){
+    document.body.classList.add("page-in");
+});
+</script>
+
+</body>
+</html>
