@@ -48,7 +48,7 @@ body.light-mode .popup{
 
 /* ===== HEADER ===== */
 header{
-    background: linear-gradient(90deg,#0f172a,#1e293b);
+    background: linear-gradient(135deg,#0f172a,#1e293b,#0f172a);
     padding:12px 15px;
     display:flex;
     justify-content:space-between;
@@ -56,6 +56,24 @@ header{
     border-radius:20px;
     margin:15px;
     box-shadow:0 12px 35px rgba(0,0,0,0.45);
+    position:relative;
+    overflow:hidden;
+}
+
+/* hiệu ứng nền nhẹ phía sau logo */
+header::before{
+    content:"";
+    position:absolute;
+    left:-50px;
+    top:-50px;
+    width:250px;
+    height:250px;
+    background:radial-gradient(circle at center,
+        rgba(139,92,246,0.35),
+        rgba(59,130,246,0.25),
+        transparent 70%);
+    filter:blur(40px);
+    z-index:0;
 }
 
 /* ===== LOGO ===== */
@@ -63,6 +81,8 @@ header{
     width:160px;
     display:flex;
     align-items:center;
+    position:relative;
+    z-index:1;
 }
 
 .logo-img{
@@ -73,6 +93,7 @@ header{
     border:none;
     padding:0;
     margin:0;
+    filter:drop-shadow(0 0 12px rgba(168,85,247,0.6));
 }
 
 /* ===== ICON ===== */
