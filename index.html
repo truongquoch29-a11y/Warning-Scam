@@ -78,19 +78,18 @@ header::before{
 /* ===== LOGO ===== */
 .logo-wrap{
     width:100%;
-    height:120px;
-    position:relative;
+    height:90px;          /* giảm chiều cao khung */
     overflow:hidden;
+    display:flex;
+    align-items:center;
+    justify-content:center;
 }
 
 .logo-img{
-    position:absolute;
-    top:50%;
-    left:50%;
-    transform:translate(-50%, -50%) scale(1.4);
-    height:auto;
+    height:100%;          /* vừa khung */
     width:auto;
-    max-height:none;
+    object-fit:contain;
+    transform:scale(1.1); /* phóng nhẹ thôi */
 }
 /* ===== ICON ===== */
 .header-icons{
