@@ -16,7 +16,7 @@
 body{
     background:#0f172a;
     color:#f1f5f9;
-    transition:background 0.4s ease, color 0.4s ease;
+    transition:background 0.5s ease, color 0.5s ease;
     animation:fadePage 0.8s ease;
 }
 
@@ -60,7 +60,6 @@ header{
     overflow:hidden;
 }
 
-/* hiệu ứng nền nhẹ phía sau logo */
 header::before{
     content:"";
     position:absolute;
@@ -98,15 +97,23 @@ header::before{
 
 /* ===== ICON ===== */
 .header-icons{
-    font-size:22px;
+    font-size:24px;
     display:flex;
     gap:18px;
     color:inherit;
+    position:relative;
+    z-index:1;
 }
 
 .theme-toggle{
     cursor:pointer;
     user-select:none;
+    transition:transform 0.5s ease, opacity 0.4s ease;
+    display:inline-block;
+}
+
+.rotate{
+    transform:rotate(180deg) scale(1.2);
 }
 
 /* ===== MARQUEE ===== */
@@ -156,8 +163,6 @@ header::before{
     object-fit:cover;
     display:block;
 }
-
-/* ===== PHẦN CÒN LẠI ===== */
 
 .acc-id{
     position:absolute;
@@ -224,7 +229,7 @@ header::before{
         <img src="images/logo2.png" class="logo-img">
     </div>
     <div class="header-icons">
-        <span class="theme-toggle" onclick="toggleTheme()">🌙</span>
+        <span id="themeIcon" class="theme-toggle" onclick="toggleTheme()">🌙</span>
     </div>
 </header>
 
@@ -251,7 +256,20 @@ header::before{
 
 <script>
 function toggleTheme(){
-    document.body.classList.toggle("light-mode");
+    const body = document.body;
+    const icon = document.getElementById("themeIcon");
+
+    body.classList.toggle("light-mode");
+    icon.classList.add("rotate");
+
+    setTimeout(()=>{
+        if(body.classList.contains("light-mode")){
+            icon.textContent = "☀️";
+        }else{
+            icon.textContent = "🌙";
+        }
+        icon.classList.remove("rotate");
+    },250);
 }
 </script>
 
