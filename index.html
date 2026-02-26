@@ -1,36 +1,37 @@
 
 <!DOCTYPE html>  <html lang="vi">    <head>      <meta charset="UTF-8">        <meta name="viewport" content="width=device-width, initial-scale=1.0">        
 <title>SHOP ACC TH</title>  <style> 
-    /* ===== POPUP MINI FIX ===== */
+/* ===== POPUP MINI GÓC PHẢI ===== */
 .popup{
 position:fixed;
 bottom:20px;
-left:50%;
-transform:translateX(-50%) translateY(100px);
-background:linear-gradient(135deg,#ff0066,#ff8c00);
+right:20px;
+background:#2563eb;
 color:#fff;
-padding:10px 18px;
-border-radius:30px;
-font-weight:600;
+padding:10px 16px;
+border-radius:12px;
 font-size:13px;
-box-shadow:0 8px 20px rgba(0,0,0,0.4);
+font-weight:600;
+box-shadow:0 10px 25px rgba(0,0,0,0.4);
 opacity:0;
+transform:translateY(40px);
 z-index:9999;
 }
 
 @keyframes slideIn{
 to{
-transform:translateX(-50%) translateY(0);
 opacity:1;
+transform:translateY(0);
 }
 }
 
 @keyframes slideOut{
 to{
-transform:translateX(-50%) translateY(100px);
 opacity:0;
+transform:translateY(40px);
 }
 }
+
     footer{        
     margin:30px 15px 20px;        
     padding:20px 15px;        
@@ -208,24 +209,23 @@ from{transform:rotate(0deg) scale(1);}
 to{transform:rotate(360deg) scale(1.2);}
 }
 
-/* ===== MARQUEE FIX ===== */
+/* ===== MARQUEE NHẸ HƠN ===== */
 .marquee{
-background:linear-gradient(90deg,#7c3aed,#ec4899,#7c3aed);
-margin:12px 20px;
-padding:8px 12px;
-border-radius:14px;
+background:#1e293b;
+margin:12px 25px;
+padding:8px 14px;
+border-radius:12px;
 overflow:hidden;
 font-size:13px;
-color:#fff;
-box-shadow:0 5px 15px rgba(0,0,0,0.3);
-position:relative;
+color:#cbd5e1;
+border:1px solid rgba(255,255,255,0.08);
 }
 
 .marquee p{
 white-space:nowrap;
-animation:marqueeRun 15s linear infinite;
-font-weight:600;
-letter-spacing:0.5px;
+animation:marqueeRun 18s linear infinite;
+font-weight:500;
+letter-spacing:0.3px;
 }
 
 @keyframes marqueeRun{
