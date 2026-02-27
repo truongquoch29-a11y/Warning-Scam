@@ -7,32 +7,69 @@
 
 <style>
 
-/* ===== DETAIL SECTION FIX ===== */
+/* ===== DETAIL SECTION  ===== */
+
 .acc-detail-section{
     width:100%;
-    max-width:500px;
-    margin:35px auto 0 auto; /* căn giữa giống container */
+    max-width:900px;      /* rộng hơn container trên */
+    margin:50px auto 0 auto;
+    padding:0 15px;
 }
 
-/* Tiêu đề giống form shop acc */
+/* Tiêu đề cân giữa, form giống shop */
 .acc-detail-title{
     text-align:center;
-    font-size:22px;
+    font-size:26px;
     font-weight:700;
-    margin-bottom:22px;
-    letter-spacing:0.5px;
+    margin-bottom:35px;
+    letter-spacing:1px;
     position:relative;
 }
 
-/* gạch chân nhẹ cho cân đối */
 .acc-detail-title::after{
     content:"";
-    width:60px;
-    height:3px;
+    width:80px;
+    height:4px;
     display:block;
-    margin:10px auto 0 auto;
+    margin:14px auto 0 auto;
     border-radius:10px;
-    background:linear-gradient(45deg,#2563eb,#3b82f6);
+    background:linear-gradient(45deg,#7c3aed,#2563eb);
+}
+
+/* Ảnh xếp dọc giống ảnh 2 */
+.acc-detail-images{
+    display:flex;
+    flex-direction:column;
+    gap:40px;
+}
+
+/* Card ảnh */
+.detail-card{
+    border-radius:22px;
+    overflow:hidden;
+    transition:0.35s ease;
+}
+
+/* Dark */
+body:not(.light-mode) .detail-card{
+    background:#1e293b;
+    box-shadow:0 20px 45px rgba(0,0,0,0.5);
+}
+
+/* Light */
+body.light-mode .detail-card{
+    background:#ffffff;
+    box-shadow:0 20px 45px rgba(0,0,0,0.12);
+}
+
+.detail-card img{
+    width:100%;
+    display:block;
+}
+
+/* hover nổi nhẹ */
+.detail-card:hover{
+    transform:translateY(-8px);
 }
 
 /* ===== BODY ===== */
