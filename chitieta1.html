@@ -451,22 +451,28 @@ window.addEventListener("DOMContentLoaded", function(){
 <p>© 2024 THTSCSHOP - Bán acc uy tín - Hỗ trợ 24/7</p>
 
 </footer>
+<div class="payment-popup" id="paymentPopup">
+  <div class="payment-box">
+
     <h2 id="popupAcc"></h2>
 
-<div class="welcome-title">
-❤️ THANKS YOU<br>
-FOR<br>
-YOUR PURCHASE ❤️
+    <div class="welcome-title">
+      ❤️ THANKS YOU<br>
+      FOR<br>
+      YOUR PURCHASE ❤️
+    </div>
+
+    <p>
+      HÃY LÀM THEO CÁC BƯỚC NHƯ SAU:<br>
+      📢 Chụp ảnh màn hình phần này và ấn OK<br>
+      💙 Cảm ơn bạn đã tin tưởng và ủng hộ shop!<br>
+      Uy tín • Nhanh gọn • Giá rẻ
+    </p>
+
+    <button class="popup-ok" onclick="goFacebook()">OK</button>
+
+  </div>
 </div>
-
-<p>
-HÃY LÀM THEO CÁC BƯỚC NHƯ SAU:<br>
-📢 Chụp ảnh màn hình phần này và ấn OK<br>
-💙 Cảm ơn bạn đã tin tưởng và ủng hộ shop!<br>
-Uy tín • Nhanh gọn • Giá rẻ
-</p>
-
-<button class="popup-ok" onclick="goFacebook()">OK</button>
     <script>
 function openPayment(){
     document.getElementById("paymentPopup").classList.add("active");
