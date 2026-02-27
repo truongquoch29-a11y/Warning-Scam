@@ -6,6 +6,54 @@
 <title>Chi Tiết Acc</title>
 
 <style>
+    /* ===== PAYMENT POPUP ===== */
+.payment-popup{
+position:fixed;
+inset:0;
+background:rgba(0,0,0,0.6);
+display:flex;
+align-items:center;
+justify-content:center;
+z-index:9999;
+opacity:0;
+visibility:hidden;
+transition:0.3s ease;
+}
+
+.payment-popup.active{
+opacity:1;
+visibility:visible;
+}
+
+.payment-box{
+background:#ffffff;
+width:90%;
+max-width:380px;
+padding:25px 20px;
+border-radius:16px;
+text-align:center;
+box-shadow:0 20px 50px rgba(0,0,0,0.4);
+}
+
+.payment-box h2{
+margin-bottom:10px;
+font-size:18px;
+}
+
+.payment-box p{
+font-size:14px;
+margin-bottom:20px;
+}
+
+.popup-ok{
+padding:10px 25px;
+border:none;
+border-radius:10px;
+background:linear-gradient(45deg,#2563eb,#3b82f6);
+color:#fff;
+font-weight:bold;
+cursor:pointer;
+}
 /* ===== FOOTER CLEAN - FIX DARK MODE ===== */
 footer{
 margin-top:50px;
@@ -329,8 +377,7 @@ body.light-mode .pay-btn{
         <div class="badge">Game Không Bảo Hành</div>
     </div>
 
-    <a href="#" class="pay-btn">Thanh Toán</a>
-</div>
+    <a href="#" class="pay-btn" onclick="openPayment()">Thanh Toán</a>
 
 <div class="acc-detail-section">
     <div class="acc-detail-title">
@@ -379,5 +426,21 @@ window.addEventListener("DOMContentLoaded", function(){
 <p>© 2024 THTSCSHOP - Bán acc uy tín - Hỗ trợ 24/7</p>
 
 </footer>
+    <div class="payment-popup" id="paymentPopup">
+  <div class="payment-box">
+    <h2>Thông Báo</h2>
+    <p>Vui lòng liên hệ Facebook để thanh toán acc.</p>
+    <button class="popup-ok" onclick="goFacebook()">OK</button>
+  </div>
+    </div>
+    <script>
+function openPayment(){
+    document.getElementById("paymentPopup").classList.add("active");
+}
+
+function goFacebook(){
+    window.location.href="https://www.facebook.com/share/1Q8MGeMzvT/?mibextid=wwXIfr"; 
+}
+    </script>
 </body>
 </html>
