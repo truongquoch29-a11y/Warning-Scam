@@ -6,6 +6,49 @@
 <title>Chi Tiết Acc</title>
 
 <style>
+    /* ===== ACC DETAIL SECTION ===== */
+.acc-detail-section{
+    margin-top:40px;
+}
+
+/* TITLE */
+.acc-detail-title{
+    text-align:center;
+    font-size:22px;
+    font-weight:bold;
+    margin-bottom:20px;
+}
+
+/* GALLERY NẰM NGANG */
+.acc-detail-gallery{
+    display:flex;
+    gap:15px;
+    overflow-x:auto;
+    padding-bottom:10px;
+}
+
+/* ẢNH */
+.acc-detail-gallery img{
+    width:260px;
+    border-radius:14px;
+    flex-shrink:0;
+    transition:0.3s ease;
+}
+
+/* DARK MODE */
+body:not(.light-mode) .acc-detail-gallery img{
+    box-shadow:0 8px 25px rgba(0,0,0,0.4);
+}
+
+/* LIGHT MODE */
+body.light-mode .acc-detail-gallery img{
+    box-shadow:0 8px 20px rgba(0,0,0,0.08);
+}
+
+/* Hover nhẹ */
+.acc-detail-gallery img:hover{
+    transform:scale(1.05);
+}
 *{
     margin:0;
     padding:0;
