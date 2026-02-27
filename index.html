@@ -30,64 +30,70 @@ transform:translateY(0);
 }
     
 text-align:center;
-/* ===== FOOTER SIMPLE - KHÔNG BOX ===== */
+/* ===== FOOTER PROFESSIONAL ===== */
 footer{
-margin:40px 0 20px;
-padding:20px 15px;
-background:transparent;      /* không nền */
-border-radius:0;             /* bỏ bo góc */
-box-shadow:none;             /* bỏ đổ bóng */
+margin-top:50px;
+padding:35px 15px 25px;
 text-align:center;
-font-size:13px;
+background:#0b1220;              /* màu bắt đầu từ footer */
+border-top:1px solid #1f2937;     /* viền nhẹ phân cách */
 }
 
 /* Dark mode */
 body:not(.light-mode) footer{
-color:#94a3b8;               /* màu chữ dịu, không lệch nền */
+background:#0b1220;
+color:#94a3b8;                    /* chữ dịu, không chói */
 }
 
 /* Light mode */
 body.light-mode footer{
+background:#e9edf3;               /* xám rất nhẹ */
 color:#475569;
+border-top:1px solid #d8dee6;
 }
 
 footer h3{
-margin-bottom:10px;
-font-size:16px;
-letter-spacing:1px;
+margin-bottom:15px;
+font-size:18px;
+letter-spacing:2px;
+font-weight:700;
+text-align:center;
 color:inherit;
 }
 
 .footer-links{
-margin:12px 0;
+display:flex;
+justify-content:center;
+gap:12px;
+flex-wrap:wrap;
+margin-bottom:15px;
 }
 
 .footer-links a{
-display:inline-block;
-margin:4px 6px;
-padding:6px 12px;
-border-radius:8px;
-text-decoration:none;
+padding:7px 16px;
+border-radius:10px;
+font-size:13px;
 font-weight:600;
-font-size:12px;
-background:#334155;          /* giữ nguyên nút */
-color:#fff;
-transition:0.3s;
+text-decoration:none;
+background:#334155;
+color:#ffffff;
+transition:0.25s ease;
 }
 
 .footer-links a:hover{
-background:linear-gradient(135deg,#2563eb,#7c3aed,#ec4899);
+transform:translateY(-2px);
+background:linear-gradient(135deg,#2563eb,#3b82f6);
 }
 
 body.light-mode .footer-links a{
-background:#e2e8f0;
+background:#cbd5e1;
 color:#0f172a;
 }
 
 footer p{
-margin-top:10px;
 font-size:12px;
 opacity:0.7;
+margin:0;
 }
 .shop-notice-box{
 background:#ffffff;
