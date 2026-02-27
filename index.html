@@ -551,14 +551,15 @@ window.open("https://facebook.com/yourpage","_blank");
     <a href="https://zalo.me/g/rbdkzp864" target="_blank">NHÓM ZALO</a>          
 </div>    <p>© 2024 THTSCSHOP - Bán acc uy tín - Hỗ trợ 24/7</p>          
 </footer>          
-<script>  function goDetail(e){      
-e.preventDefault();      
-document.body.classList.add("fade-out");      
-setTimeout(function(){      
-window.location.href = "chitieta1.html";      
-},350);      
-return false;      
-}      
+<script>  function goDetail(e){
+    e.preventDefault();
+    const link = e.currentTarget.getAttribute("href");
+    document.body.classList.add("fade-out");
+    setTimeout(function(){
+        window.location.href = link;
+    },350);
+    return false;
+}
 </script>  
 <script>
 window.addEventListener("DOMContentLoaded", function(){
